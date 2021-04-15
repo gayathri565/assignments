@@ -1,0 +1,59 @@
+public class mathOP{
+    int real,img;
+    mathOP(int a){
+        this.real=a;
+        this.img=0;
+    }
+    mathOP(int p, int q){
+        this.real=p;
+        this.img=q;
+    }
+    void add(mathOP ...p){
+        mathOP temp = new mathOP(0,0);
+        System.out.print("The Addition of "+ p.length+" terms is : ");
+        for(mathOP i : p){
+            temp.real+=i.real;
+            temp.img+=i.img;
+        }
+     
+        if(temp.img!=0)
+        System.out.println(temp.real +" +"+temp.img+"i");
+        else
+            System.out.println(temp.real);
+        
+    }
+    void subtract(mathOP ...x){
+         mathOP temp = new mathOP(0,0);
+         System.out.print("The Subtraction of "+ p.length+" terms is : ");
+        for(mathOP i : p){
+            temp.real=i.real-temp.real;
+            temp.img=i.img-temp.img;
+        }
+     
+       if(temp.img!=0){
+            System.out.println(temp.real +" +"+temp.img+"i");
+       }
+       else
+          
+            System.out.println(temp.real);
+    }
+    public static void main(String args[]) {
+      mathOp obj1= new mathOp(2,3);
+      mathOp obj2= new mathOp(5,5);
+      mathOp obj3= new mathOp(2,2);
+      mathOp obj4= new mathOp(8,8);
+      mathOp obj5= new mathOp(0,0);
+      
+      mathOp  ob1= new mathOp(1);
+      mathOp  ob2= new mathOp(2);
+      mathOp  ob3 = new mathOp(3);
+      mathOp  ob4= new mathOp(0);
+      
+      ob4.add(ob1,ob2,ob33);
+      ob4.subtract(ob1,ob2,ob3);
+      
+      obj5.add(obj1,obj2,obj3,obj4);
+     
+      obj5.subtract(obj1,obj2);
+    }
+}
